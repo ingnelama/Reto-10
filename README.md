@@ -4,7 +4,7 @@ Reto número 10. PDC
 ### Primer punto
 - Desarrolle un programa que permita realizar la suma/resta de matrices. El programa debe validar las condiciones necesarias para ejecutar la operación.
 ```pseudocode
-  def sumar_matrices(matriz_1_operable : list, matriz_2_operable : list, matriz_1 : list, matriz_2 : list) ->list:
+def sumar_matrices(matriz_1_operable : list, matriz_2_operable : list, matriz_1 : list, matriz_2 : list) ->list:
 	resultado_suma = []
 	for i in range(len(matriz_1_operable)):
 		for j in range(len(matriz_1[i])):
