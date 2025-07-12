@@ -47,6 +47,45 @@ if __name__ == "__main__":
 ### Segundo punto
 - Desarrolle un programa que permita realizar el producto de matrices. El programa debe validar las condiciones necesarias para ejecutar la operación.
 ```pseudocode
+def multiplicar_matrices(matriz_1 : list, matriz_2: list)-> list:
+    if len(matriz_1[0]) == len(matriz_2):
+        factor = []
+        for i in range(len(matriz_1)):
+            factor.append([])
+            for j in range(len(matriz_2[0])):
+                factor.append(0)
+        for i in range(len(matriz_1)):
+            for j in range(len(matriz_2[0])):
+                for k in range(len(matriz_1[0])):
+                    factor[i][j] += matriz_1[i][k] * matriz_2[k][j]
+        return factor
+    else:
+        return None
+            
+        
+if __name__ == "__main__":
+    print("Bienvenido, ingrese dos funciones, el programa le retornara el producto de esas." + "Recuerde, para que se puedan multiplicar dos matrices es necesario que: el número de colmunas de la primera matriz debe de ser igual a el número de filas de la segunda matriz ")
+    filas_matriz_1 = int(input("Ingrese el número de filas de la primera matriz: "))
+    columnas_matriz_1 = int(input("Ingrese el número de columnas de la primera matriz: "))
+    matriz_1 = []
+    for fila_position in range(filas_matriz_1):
+        fila_1 = []
+        for element in range(columnas_matriz_1):
+            fila_1.append(int(input(f"Ingrese un elemento de la fila {fila_position}: ")))
+        matriz_1.append(fila_1)
+    matriz_2 = []
+    filas_matriz_2 = int(input("Ingrese el número de filas de la segunda matriz: "))
+    columnas_matriz_2 = int(input("Ingrese el número de columnas de la segunda matriz: "))
+    for fila_position in range(filas_matriz_2):
+        fila_2 = []
+        for element in range(columnas_matriz_2):
+            fila_2.append(int(input(f"Ingrese un elemento de la fila {fila_position}: ")))
+        matriz_2.append(fila_2)
+    resultado = multiplicar_matrices
+    if resultado == None:
+        print("no son operables")
+    else:
+        print[resultado]
 ```
 
 ### Tercer punto
