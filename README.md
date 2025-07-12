@@ -123,11 +123,57 @@ for i in transpuesta:
 ### Cuarto punto
 - Desarrollar un programa que sume los elementos de una columna dada de una matriz.
 ```pseudocode
+def sumar_columna_de_una_matriz(matriz : list,x : int) -> list:
+    suma = []
+    for j in range(len(matriz[x])):
+        suma_columna = 0
+        for i in range(len(matriz)):
+            suma_columna += matriz[i][j]
+        suma.append(suma_columna)
+    return suma
+    
+
+if __name__ == "__main__":
+    filas_de_la_matriz = int(input("Ingrese el número de filas de la matriz: "))
+    columnas_de_la_matriz = int(input("Ingrese el número de columnas de la matriz: "))
+    matriz = []
+    for fila_position in range(filas_de_la_matriz):
+        fila_1 = []
+        for element in range(columnas_de_la_matriz):
+            fila_1.append(int(input(f"Ingrese un elemento de la fila {fila_position}: ")))
+        matriz.append(fila_1)
+    x : int
+    x = int(input("Ingrese la columna que desa sumar: "))
+    resultado_de_la_suma = sumar_columna_de_una_matriz(matriz, x)
+    print(resultado_de_la_suma)
 ```
 
 ### Quinto punto
 - Desarrollar un programa que sume los elementos de una fila dada de una matriz.
 ```pseudocode
+def sumar_columna_de_una_matriz(matriz : list,x : int) -> list:
+    suma = []
+    for i in range(len(matriz)):
+        suma_columna = 0
+        for j in range(len(matriz[0])):
+            suma_columna += matriz[i][j]
+        suma.append(suma_columna)
+    return suma
+    
+
+if __name__ == "__main__":
+    filas_de_la_matriz = int(input("Ingrese el número de filas de la matriz: "))
+    columnas_de_la_matriz = int(input("Ingrese el número de columnas de la matriz: "))
+    matriz = []
+    for fila_position in range(filas_de_la_matriz):
+        fila_1 = []
+        for element in range(columnas_de_la_matriz):
+            fila_1.append(int(input(f"Ingrese un elemento de la fila {fila_position}: ")))
+        matriz.append(fila_1)
+    x : int
+    x = int(input("Ingrese la fila que desa sumar: "))
+    resultado_de_la_suma = sumar_columna_de_una_matriz(matriz, x)
+    print(resultado_de_la_suma)
 ```
 
 
