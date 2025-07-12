@@ -91,6 +91,33 @@ if __name__ == "__main__":
 ### Tercer punto
 - Desarrolle un programa que permita obtener la matriz transpuesta de una matriz ingresada. El programa debe validar las condiciones necesarias para ejecutar la operación.
 ```pseudocode
+matriz = [[1, 2, 3], 
+          [4, 5 ,6], 
+          [7, 8, 9]]
+
+
+def transponer(matriz):
+    operacion = []
+    for i in range(len(matriz[0])):
+        operacion.append([])
+        for j in range(len(matriz)):
+            operacion[i].append(matriz[j][i])
+    return matriz
+
+transpuesta = transponer(matriz)
+
+for i in matriz:
+    for elemento in i:
+        print(elemento, end=" ")
+    print()
+
+print("---------------------")
+
+
+for i in transpuesta:
+    for elemento in i:
+        print(elemento, end=" ")
+    print()
 ```
 
 ### Cuarto punto
